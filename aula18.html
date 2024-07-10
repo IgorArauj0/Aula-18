@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            transition-duration: .8s;
+            transition-timing-function: ease-in-out;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        ul {
+            list-style: none;
+            height: fit-content;
+            display: flex;
+            gap: 6px;
+            flex-direction: column;
+            border: 1px solid white;
+            padding: 10px;
+            color: white;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        li {
+            color: grey;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 1px solid green;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            display: none;
+        }
+
+
+        .material-outlined {
+            color: aqua;
+            display: block;
+        }
+
+
+        li:hover{
+            scale: 1.02;
+            color: white;
+            gap: 10px;
+            background-color: black;
+        }
+
+        li:hover > .material-outlined {
+            filter: drop-shadow(0px 0px 5px aqua);
+        }
+
+
+        .flex li {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+
+ <ul>
+    CLIQUE E ACESSE
+    <li><span class="material-outlined">wifi</span>WIFI</li>
+
+    <li><span class="material-outlined">stacks</span>Fotos</li>
+
+    <li><span class="material-outlined">rocket</span>Investimentos</li>
+
+    <li><span class="material-outlined">delete</span>Lixeira</li>
+
+    
+ </ul>
+
+<script>
+    const ul = document.querySelector("ul");
+
+    ul.addEventListener("click", () => {
+        ul.classList.toggle('flex') //toggle usado para fazer a troca de class ou adição
+    });
+</script>
+
+</body>
+</html>
